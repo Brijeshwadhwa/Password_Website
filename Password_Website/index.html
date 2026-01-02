@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Password Strength Checker - Analyze your password security with real-time strength evaluation and brute-force attack time estimation">
+    <title>Password Strength Checker | Security Analysis Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Password Strength Checker</h1>
+            <p class="subtitle">Professional Security Analysis Tool</p>
+        </header>
+
+        <main class="card">
+            <div class="input-section">
+                <label for="password-input" class="input-label">Enter Password</label>
+                <div class="input-wrapper">
+                    <input 
+                        type="password" 
+                        id="password-input" 
+                        class="password-input" 
+                        placeholder="Type your password here..."
+                        autocomplete="off"
+                        aria-label="Password input field"
+                    >
+                    <button 
+                        type="button" 
+                        id="toggle-visibility" 
+                        class="toggle-btn"
+                        aria-label="Toggle password visibility"
+                    >
+                        👁️
+                    </button>
+                </div>
+            </div>
+
+            <div id="strength-section" class="strength-section hidden">
+                <div class="strength-header">
+                    <h2 id="strength-title" class="strength-title">Password Strength</h2>
+                    <span id="strength-badge" class="strength-badge"></span>
+                </div>
+
+                <div class="strength-bar-container">
+                    <div id="strength-bar" class="strength-bar"></div>
+                </div>
+
+                <div id="strength-details" class="strength-details"></div>
+            </div>
+
+            <div id="bruteforce-section" class="bruteforce-section hidden">
+                <h3 class="section-title">🛡️ Brute-Force Attack Estimation</h3>
+                <div class="assumption-note">
+                    <small>Assumption: 10 billion guesses per second</small>
+                </div>
+                <div id="bruteforce-time" class="bruteforce-time"></div>
+            </div>
+
+            <div id="criteria-section" class="criteria-section hidden">
+                <h3 class="section-title">Password Criteria Analysis</h3>
+                <ul id="criteria-list" class="criteria-list"></ul>
+            </div>
+        </main>
+
+        <footer>
+            <p class="footer-text">
+                <strong>Security Note:</strong> All analysis is performed locally in your browser. 
+                No data is transmitted, stored, or logged.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
