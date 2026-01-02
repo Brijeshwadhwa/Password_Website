@@ -96,8 +96,6 @@ git add index.html style.css script.js README.md
 # Commit
 git commit -m "Initial commit: Password Strength Checker"
 
-# Add remote (replace with your repository URL)
-git remote add origin https://github.com/[username]/[repository-name].git
 
 # Push to GitHub
 git branch -M main
